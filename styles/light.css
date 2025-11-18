@@ -10,3 +10,15 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-bg-color: #FFF1F7;
+    --background-image: url("../images/cover-image-light.png");
+    --header-headline: #FFC2E6;
+    --header-headline-shadow: #FF8DCB;
+    --header-title-color: #353430;
+    --header-title-bg-color: #FF8DCB;
+    --header-theme-menu-color: #353430;
+  }
+}

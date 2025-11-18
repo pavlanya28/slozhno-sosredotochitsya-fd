@@ -2,4 +2,129 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--page-bg-color);
+  background-attachment: fixed;
+  background-image: var(--background-image);
+  background-size: cover;
+}
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr;
+  margin-block-end: 40px;
+}
+
+.header__theme-menu {
+  font-family: IBM Plex Mono, sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 18px;
+
+  text-align: end;
+
+  color: var(--header-theme-menu-color);
+
+}
+
+.header__theme-menu-list {
+
+}
+
+.header__theme-menu-item {
+
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--header-theme-menu-color);
+}
+
+.header__theme-menu-button:focus {
+  text-decoration: underline;
+}
+
+.header__headline {
+  font-family: IBM Plex Mono, sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 116px;
+  line-height: 83%;
+  color: var(--header-headline);
+  text-shadow: 4px 4px 0 var(--header-headline-shadow);
+
+}
+
+.header__title {
+  font-family: IBM Plex Mono;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 23.4px;
+
+  color: var(--header-title-color);
+  background-color: var(--header-title-bg-color);
+
+  display: block;
+  align-self: center;
+}
+
+.main {
+  margin-block-end: 40px;
+  display: flex;
+  gap: 50px;
+}
+
+
+/*ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ ПЛАНШЕТ */
+@media (width >= 768px) {
+  .header {
+    min-block-size: 1024px;
+    margin-block-end: 60px;
+  }
+
+  .header__headline {
+    font-size: 120px;
+  }
+
+  .header__title {
+    justify-self: end;
+    max-inline-size: 364px;
+  }
+
+  .main {
+    margin-block-end: 60px;
+  }
+
+  .footer {
+    min-block-size: 1024px;
+  } 
+}
+
+
+/*КОМП КОМП КОМП КОМП КОМП КОМП КОМП КОМП КОМП КОМП КОМП КОМП*/
+@media (width >= 1024px) {
+  .header {
+    min-block-size: 768px;
+  }
+
+  .header__headline {
+    font-size: 157px;
+  }
+
+  .header__title {
+    align-self: end;
+    max-inline-size: 491px;
+  }
+
+  .footer {
+    min-block-size: 768px;
+  }
 }
