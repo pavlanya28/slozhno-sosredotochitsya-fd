@@ -97,7 +97,6 @@
 .headline {
   font-family: IBM Plex Mono, monospace;
   font-weight: 700;
-  font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--header-headline);
