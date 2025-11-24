@@ -9,7 +9,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-      --accent-color: #FF8DCB;
+    --accent-color: #FF8DCB;
     --page-bg-color: #FFF1F7;
     --background-image: url("../images/cover-image-light.png");
     --header-headline: #FFC2E6;
@@ -19,7 +19,8 @@
     --text: #353430;
     --recommendation: #353430;
     --decorative-element: transparent;
-    --decorated-zone: #353430;
+    --decorated-zone-color: #353430;
+    --header-theme-menu-color-hover: rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -34,6 +35,7 @@
     --text: #353430;
     --recommendation: #353430;
     --decorative-element: transparent;
-        --decorated-zone-color: #353430;
+    --decorated-zone-color: #353430;
+    --header-theme-menu-color-hover: rgba(50, 49, 45, 0.4);
   }
 }

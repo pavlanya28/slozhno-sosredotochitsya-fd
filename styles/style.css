@@ -9,7 +9,7 @@
 }
 
 .header {
-  block-size: min(668px, 100vh);
+  block-size: max(668px, 100vh);
   /*min-block-size: 668px;
   max-block-size: 100vh;*/
   display: grid;
@@ -25,7 +25,7 @@
   top: 16px;
   right: 39px;
 
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: IBM Plex Mono, monospace;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
@@ -53,7 +53,7 @@
   align-self: center;
   grid-row: 1;
 
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: IBM Plex Mono, monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
@@ -78,12 +78,16 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--header-theme-menu-color);
+  border: 1px solid var(--header-theme-menu-color-hover);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--header-theme-menu-color);
+  outline: 1px solid currentColor;
+}
+
+.header__theme-menu-button:focus {
+  outline: 1px solid currentColor;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -91,9 +95,9 @@
 }
 
 .headline {
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: IBM Plex Mono, monospace;
   font-weight: 700;
-  font-style: Bold;
+  font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   color: var(--header-headline);
@@ -111,9 +115,8 @@
 }
 
 .title {
-  font-family: IBM Plex Mono;
+  font-family: IBM Plex Mono, monospace;
   font-weight: 700;
-  font-style: Bold;
   font-size: 18px;
   line-height: 23.4px;
 
@@ -164,9 +167,8 @@
 }
 
 .question {
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: IBM Plex Mono, monospace;
   font-weight: 700;
-  font-style: Bold;
   font-size: 18px;
   line-height: 23.4px;
 
@@ -181,7 +183,7 @@
 }
 
 .text {
-  font-family: IBM Plex Mono, sans-serif;
+  font-family: IBM Plex Mono, monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
@@ -190,7 +192,7 @@
 }
 
 .recommendation {
-  font-family: IBM Plex Mono;
+  font-family: IBM Plex Mono, monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
@@ -209,12 +211,15 @@
 }
 
 .link:hover {
-  text-decoration: underline solid var(--text) 1.5px;
+  border-bottom: 1.5px solid var(--text);
+}
+
+.link:focus {
+  outline: 1px solid var(--text);
 }
 
 .link:focus-visible {
-  padding: 12px 4px 6px;
-  border: 1px solid var(--text);
+  outline: 1px solid var(--text);
 }
 
 .gallery {
@@ -288,10 +293,13 @@
     margin-block-start: 0;
   }
 
-  .section-why {
+  .section {
     display: grid;
-    grid-template-columns: 1fr 2fr;
     gap: 20px;
+  }
+
+  .section-why {
+    grid-template-columns: 1fr 2fr;
   }
 
   .card-why {
@@ -299,9 +307,7 @@
   }
 
   .section-what {
-    display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
   }
 
   .question-what {
@@ -313,9 +319,7 @@
   }
 
   .section-how {
-    display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
   }
 
   .question-how {
@@ -371,7 +375,6 @@
 
   .headline {
     line-height: 0;
-    font-size: 157px;
   }
 
   .header__title {
@@ -381,8 +384,8 @@
 
   .section-what {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
     grid-template-rows: repeat(2, min-content);
-    gap: 20px;
   }
 
   .card-what {
